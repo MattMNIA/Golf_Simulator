@@ -3,13 +3,6 @@ import numpy as np
 import functions
 
 
-def reject_outliers_2(list, m):
-    d = [x-np.median(list) for x in list]
-    mdev = np.median(d)
-    s = d / (mdev if mdev else 1.)
-    return list[s < m]
-
-
 class ball:
     lastUpdateFrame: object
 
